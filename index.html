@@ -2,38 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Yassin Amin - Link Hub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+    <title>George Youssef - Link Hub</title>
     
-    <meta name="description" content="Welcome to my Link Hub — everything you need to view my work and contact me in one place.">
+    <meta name="description" content="Welcome to my Link Hub — everything you need to contact me in one place.">
     <meta name="theme-color" content="#007bff">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/Favicon.png">
-    <link rel="apple-touch-icon" href="assets/Favicon.png">
+    <link rel="icon" type="image/png" href="assets/George.png">
+    <link rel="apple-touch-icon" href="assets/George.png">
     
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://yassin.buildyourweb.ae/">
-    <meta property="og:title" content="Yassin Amin - Link Hub">
-    <meta property="og:description" content="Welcome to my Link Hub — everything you need to view my work and contact me in one place.">
-    <meta property="og:image" content="https://www.yassinamin.com/assets/og-preview.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:site_name" content="Yassin Amin - Link Hub">
+    <meta property="og:url" content="https://george.buildyourweb.ae/">
+    <meta property="og:title" content="George Youssef - Link Hub">
+    <meta property="og:description" content="Welcome to my Link Hub — everything you need to contact me in one place.">
+    <meta property="og:image" content="https://george.buildyourweb.ae/assets/George.png">
+    <meta property="og:image:width" content="441">
+    <meta property="og:image:height" content="566">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:alt" content="George Youssef">
+    <meta property="og:site_name" content="George Youssef - Link Hub">
     <meta property="og:locale" content="en_US">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://yassin.buildyourweb.ae/">
-    <meta name="twitter:title" content="Yassin Amin - Link Hub">
-    <meta name="twitter:description" content="Welcome to my Link Hub — everything you need to view my work and contact me in one place.">
-    <meta name="twitter:image" content="https://www.yassinamin.com/assets/og-preview.png">
+    <meta name="twitter:url" content="https://george.buildyourweb.ae/">
+    <meta name="twitter:title" content="George Youssef - Link Hub">
+    <meta name="twitter:description" content="Welcome to my Link Hub — everything you need to contact me in one place.">
+    <meta name="twitter:image" content="https://george.buildyourweb.ae/assets/George.png">
+    <meta name="twitter:image:alt" content="George Youssef">
     
-    <meta name="author" content="Yassin Amin">
-    <meta name="keywords" content="Yassin Amin, portfolio, contact, link hub">
+    <link rel="canonical" href="https://george.buildyourweb.ae/">
+    <meta name="author" content="George Youssef">
+    <meta name="keywords" content="George Youssef, contact, link hub">
     <style>
         * {
             margin: 0;
@@ -71,25 +75,26 @@
         }
 
         .profile-image {
+            position: relative;
             width: 100px;
             height: 100px;
             border-radius: 50%;
             background: #333;
             margin: 0 auto 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 40px;
-            color: white;
-            font-weight: bold;
             overflow: hidden;
         }
 
         .profile-image img {
-            width: 85%;
-            height: 85%;
-            object-fit: cover;
-            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            height: 88%;
+            width: auto;
+            max-width: 96%;
+            object-fit: contain;
+            object-position: center bottom;
+            display: block;
         }
 
         .profile h1 {
@@ -211,24 +216,11 @@
             vertical-align: middle;
         }
 
-        .linkedin .icon img {
-            width: 38px;
-            height: 38px;
-            transform: translateX(-2px);
-        }
-
-        .portfolio .icon img {
-            transform: translateX(3px);
-        }
-
         .whatsapp .icon img {
             transform: translateX(3px);
         }
 
         /* Unified black hover effect for all buttons */
-        .portfolio:hover:not(.clicked), .portfolio:active,
-        .buildyourweb:hover:not(.clicked), .buildyourweb:active,
-        .linkedin:hover:not(.clicked), .linkedin:active,
         .whatsapp:hover:not(.clicked), .whatsapp:active,
         .email:hover:not(.clicked), .email:active,
         .call:hover:not(.clicked), .call:active {
@@ -238,30 +230,6 @@
         }
 
         /* White logo hover effects for all buttons */
-        .portfolio:hover:not(.clicked) .icon img,
-        .portfolio:active .icon img {
-            content: url('assets/Portfolio logo white.png');
-        }
-
-        .buildyourweb .icon img {
-            filter: none;
-        }
-
-        .buildyourweb:hover:not(.clicked) .icon img,
-        .buildyourweb:active .icon img {
-            /* Outline that follows the PNG's alpha edges */
-            filter:
-                drop-shadow(1px 0 0 rgba(255, 255, 255, 0.95))
-                drop-shadow(-1px 0 0 rgba(255, 255, 255, 0.95))
-                drop-shadow(0 1px 0 rgba(255, 255, 255, 0.95))
-                drop-shadow(0 -1px 0 rgba(255, 255, 255, 0.95));
-        }
-
-        .linkedin:hover:not(.clicked) .icon img,
-        .linkedin:active .icon img {
-            content: url('assets/Linkedin logo white.png');
-        }
-
         .whatsapp:hover:not(.clicked) .icon img,
         .whatsapp:active .icon img {
             content: url('assets/Whatsapp logo white.png');
@@ -303,19 +271,11 @@
             .profile {
                 margin-bottom: 20px;
             }
-            
+
             .profile-image {
                 width: 80px;
                 height: 80px;
-                font-size: 32px;
                 margin-bottom: 12px;
-            }
-
-            .profile-image img {
-                width: 85%;
-                height: 85%;
-                object-fit: cover;
-                border-radius: 50%;
             }
             
             .profile h1 {
@@ -353,33 +313,7 @@
                 vertical-align: middle;
             }
 
-            .linkedin .icon img {
-                width: 33px;
-                height: 33px;
-                transform: translateX(-2px);
-            }
-
             /* Mobile white logo hover effects */
-            .portfolio .icon img {
-                transform: translateX(3px);
-            }
-
-            .portfolio:hover:not(.clicked) .icon img,
-            .portfolio:active .icon img {
-                content: url('assets/Portfolio logo white.png');
-                width: 24px;
-                height: 24px;
-                transform: translateX(3px);
-            }
-
-            .linkedin:hover:not(.clicked) .icon img,
-            .linkedin:active .icon img {
-                content: url('assets/Linkedin logo white.png');
-                width: 33px;
-                height: 33px;
-                transform: translateX(-2px);
-            }
-
             .whatsapp .icon img {
                 transform: translateX(3px);
             }
@@ -424,11 +358,10 @@
                 max-width: 320px;
                 width: calc(100% - 20px);
             }
-            
+
             .profile-image {
                 width: 70px;
                 height: 70px;
-                font-size: 28px;
             }
             
             .link-button {
@@ -450,33 +383,7 @@
                 vertical-align: middle;
             }
 
-            .linkedin .icon img {
-                width: 31px;
-                height: 31px;
-                transform: translateX(-2px);
-            }
-
             /* Small screen white logo hover effects */
-            .portfolio .icon img {
-                transform: translateX(3px);
-            }
-
-            .portfolio:hover:not(.clicked) .icon img,
-            .portfolio:active .icon img {
-                content: url('assets/Portfolio logo white.png');
-                width: 22px;
-                height: 22px;
-                transform: translateX(3px);
-            }
-
-            .linkedin:hover:not(.clicked) .icon img,
-            .linkedin:active .icon img {
-                content: url('assets/Linkedin logo white.png');
-                width: 31px;
-                height: 31px;
-                transform: translateX(-2px);
-            }
-
             .whatsapp .icon img {
                 transform: translateX(3px);
             }
@@ -519,19 +426,11 @@
             .profile {
                 margin-bottom: 15px;
             }
-            
+
             .profile-image {
                 width: 60px;
                 height: 60px;
-                font-size: 24px;
-                margin-bottom: 8px;
-            }
-
-            .profile-image img {
-                width: 85%;
-                height: 85%;
-                object-fit: cover;
-                border-radius: 50%;
+                margin: 0 auto 8px;
             }
             
             .profile h1 {
@@ -563,50 +462,29 @@
     <div class="container">
         <div class="profile">
             <div class="profile-image">
-                <img src="assets/Profile pic.png" alt="Profile Picture">
+                <img src="assets/George.png" alt="George Youssef">
             </div>
-            <h1>Yassin Amin</h1>
-            <p>Welcome to my Link Hub — everything you need to view my work and contact me in one place.</p>
+            <h1>George Youssef</h1>
+            <p>Welcome to my Link Hub — everything you need to contact me in one place.</p>
         </div>
 
         <ul class="links">
             <li class="link-item">
-                <a href="https://www.yassinamin.com" class="link-button portfolio" target="_blank">
-                    <span class="icon"><img src="assets/Portfolio logo.png" alt="Portfolio"></span>
-                    <span class="button-text">Portfolio</span>
-                </a>
-            </li>
-
-            <li class="link-item">
-                <a href="https://buildyourweb.ae" class="link-button buildyourweb" target="_blank">
-                    <span class="icon"><img src="assets/BYW Logo.png" alt="Build Your Web"></span>
-                    <span class="button-text">Build Your Web</span>
-                </a>
-            </li>
-            
-            <li class="link-item">
-                <a href="https://www.linkedin.com/in/yasseinabdelkawy/" class="link-button linkedin" target="_blank">
-                    <span class="icon"><img src="assets/linkedin logo.png" alt="LinkedIn"></span>
-                    <span class="button-text">LinkedIn</span>
-                </a>
-            </li>
-            
-            <li class="link-item">
-                <a href="https://wa.me/message/2WZRG66PRXP6H1" class="link-button whatsapp" target="_blank">
+                <a href="https://wa.me/971505007686" class="link-button whatsapp" target="_blank">
                     <span class="icon"><img src="assets/Whatsapp logo.png" alt="WhatsApp"></span>
                     <span class="button-text">WhatsApp</span>
                 </a>
             </li>
             
             <li class="link-item">
-                <a href="mailto:yassinamincs@gmail.com" class="link-button email">
+                <a href="mailto:George.Yussef@ikkgroup.com" class="link-button email">
                     <span class="icon"><img src="assets/Mail logo.png" alt="Email"></span>
                     <span class="button-text">Email</span>
                 </a>
             </li>
             
             <li class="link-item">
-                <a href="tel:+971509937517" class="link-button call">
+                <a href="tel:+971505007686" class="link-button call">
                     <span class="icon"><img src="assets/Phone logo.png" alt="Call"></span>
                     <span class="button-text">Call</span>
                 </a>
