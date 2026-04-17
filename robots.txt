@@ -1,6 +1,0 @@
-User-agent: *
-Allow: /
-
-# Snapchat URL Preview Service (explicit allow)
-User-agent: Snap URL Preview Service
-Allow: /
